@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(ruby:*)",
+      "Bash(bundle exec rspec:*)",
+      "Bash(bundle exec ruby bin/pdfkit:*)",
+      "Bash(bundle exec:*)",
+      "Bash(./bin/pdfkit:*)",
+      "Bash(DEBUG=1 ./bin/pdfkit analyze spec/fixtures/sample_with_bookmarks.pdf)",
+      "Bash(env DEBUG=1 ./bin/pdfkit analyze spec/fixtures/sample_with_bookmarks.pdf)",
+      "Bash(DEBUG=1 ./bin/pdfkit split spec/fixtures/sample_with_bookmarks.pdf)",
+      "Bash(for:*)",
+      "Bash(do echo \"Testing: $pdf\")",
+      "Bash(/dev/null)",
+      "Bash(done)",
+      "Bash(DEBUG=1 ./bin/pdfkit split \"/Users/fkchang/Documents/family/dad/relationships/Heroic_Husband_Method_eBook_-_final_v2.6-22.pdf\" --strategy=toc --max-pages=30)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(gem build:*)",
+      "Bash(gem install:*)",
+      "Bash(gem list:*)",
+      "Bash(gem contents:*)",
+      "Bash(gem specification:*)",
+      "Bash(gem uninstall:*)",
+      "Bash(pdfkit:*)",
+      "Read(//Users/fkchang/Documents/family/dad/relationships/Heroic_Husband_Method_eBook_-_final_v2.6-22_chunks/**)",
+      "Read(//Users/fkchang/Documents/family/dad/relationships/**)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/Users/fkchang/Documents/family/dad/relationships"
+    ]
+  }
+}
