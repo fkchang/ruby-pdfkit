@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+*.pyc
+__pycache__/
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.config
+coverage/
+InstalledFiles
+lib/bundler/man/
+pkg/
+rdoc/
+spec/reports/
+test/tmp/
+test/version_tmp/
+tmp/
+
+# RubyMine
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Development files
+ARCHITECTURE_ANALYSIS.md
+IMPLEMENTATION_PLAN.md
+docs/
+prototype_pdfkit
+
+# Output files
+splits/
+*.pdf
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
