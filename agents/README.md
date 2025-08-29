@@ -37,6 +37,7 @@ Ruby-PDFKit implements a **MapReduce-style PDF processing system** with three sp
 - **Purpose**: Processes individual PDF chunks (<100 pages)
 - **Context**: Each agent gets its own context window for thorough processing
 - **Output**: Detailed analysis of assigned chunk with page references
+- **Persistence**: Saves comprehensive analysis to `[chunk_name]_analysis.md` files
 
 ## For Claude Code Users
 
@@ -63,8 +64,22 @@ The system automatically handles the complexity - no need to choose specific age
 - **Intelligent Routing**: Automatically selects optimal processing strategy
 - **Content-Aware Splitting**: Respects document structure (chapters, sections)
 - **Parallel Processing**: Each chunk processed in separate context windows
+- **Persistent Analysis**: Detailed chunk analyses saved as markdown files
+- **Efficient Follow-ups**: Subsequent questions use saved analyses instead of re-processing
 - **Comprehensive Synthesis**: Combines chunk results into coherent output
 - **Ruby-PDFKit Integration**: Leverages CLI tools for reliable PDF handling
+
+### Output Structure
+
+After processing a large PDF, you'll find:
+```
+splits/
+├── document_ch01_intro.pdf           # Split PDF chunk
+├── document_ch01_intro_analysis.md   # Detailed analysis
+├── document_ch02_methods.pdf         # Split PDF chunk  
+├── document_ch02_methods_analysis.md # Detailed analysis
+└── document_processing_manifest.md   # Processing summary
+```
 
 ### Requirements
 
