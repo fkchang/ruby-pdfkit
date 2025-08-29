@@ -152,6 +152,38 @@ pdfkit split large_document.pdf --max-tokens 3500
 # Creates: document_pages_001-045.pdf, document_pages_046-089.pdf, etc.
 ```
 
+## Claude Code Integration
+
+Ruby-PDFKit includes intelligent agents designed specifically for Claude Code that provide seamless PDF processing with automatic handling of large documents.
+
+### Agent System
+
+The `agents/claude-code/` directory contains a **MapReduce-style PDF processing system**:
+
+- **pdf-processor**: Main entry point that automatically routes based on PDF size
+- **pdf-splitter-processor**: Orchestrates processing of large PDFs (>100 pages)
+- **pdf-chunk-processor**: Handles individual chunks in separate context windows
+
+### Quick Start with Claude Code
+
+1. Copy agents to your Claude Code project:
+   ```bash
+   cp agents/claude-code/*.md /your/project/.claude/agents/
+   ```
+
+2. Use the main agent for any PDF processing:
+   ```
+   Use pdf-processor agent: "Please summarize this document: /path/to/file.pdf"
+   ```
+
+The system automatically:
+- Detects PDF size and chooses optimal processing strategy
+- Splits large PDFs using content-aware strategies (bookmarks, TOC, headers)
+- Processes chunks in parallel with separate context windows
+- Synthesizes results into comprehensive output
+
+See `agents/README.md` for complete documentation.
+
 ## Contributing
 
 PDFKit is designed for extensibility. New splitting strategies, analyzers, and formatters can be added easily through the plugin architecture.
